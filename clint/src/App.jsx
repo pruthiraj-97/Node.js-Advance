@@ -17,6 +17,9 @@ function App() {
     console.log('Recive message is' ,message.data)
     setMessages(message.data)
    }
+   return ()=>{
+     socket.close()
+   }
   },[])
   if(!socket){
     return (
